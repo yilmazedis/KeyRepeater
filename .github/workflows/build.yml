@@ -35,12 +35,16 @@ jobs:
         run: |
           SHA=$(sha256sum dist/KeyRepeater.exe | cut -d' ' -f1)
           cat > notes.md <<EOF
+          Key Repeater presses up to 5 keys automatically, each at its own millisecond interval. It's built for **software testing** and **accessibility**.
+
           ## Download
           Download **KeyRepeater.exe** below and run it. Python is not needed.
 
           On first launch Windows SmartScreen may say "Windows protected your PC". The exe isn't code-signed, so click **More info → Run anyway**.
 
-          If the target game runs as Administrator, run KeyRepeater.exe as Administrator too.
+          If the target app runs as Administrator, run KeyRepeater.exe as Administrator too.
+
+          Only use Key Repeater where automated input is allowed; you are responsible for following each app's or service's terms of use.
 
           SHA-256: \`$SHA\`
           EOF
