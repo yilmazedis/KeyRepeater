@@ -31,6 +31,17 @@ The output is `dist\KeyRepeater.exe`, a single file that runs without Python ins
 
 To run without building: `python key_repeater.py`
 
+## Publishing a new version
+
+Push a version tag. The workflow builds the exe and publishes a GitHub Release with it attached:
+
+```bash
+git tag v1.1.0
+git push origin v1.1.0
+```
+
+The release notes include the exe's SHA-256 checksum and a list of changes since the previous tag.
+
 ## Notes
 
 - If the target game or app runs **as Administrator**, run Key Repeater as Administrator too. Windows blocks input from lower-privilege processes.
